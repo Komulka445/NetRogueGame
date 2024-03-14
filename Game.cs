@@ -89,10 +89,10 @@ namespace Rogue
             //Console.Clear();
             Console.Clear();
 
-            level01 = loader.LoadTestMap();
+            level01 = loader.LoadMapFromFile("Maps/mapfile.json");  //loader.LoadTestMap();
             mapproxy = level01;
             //Draw();
-            loader.LoadMapFromFile("Maps/mapfile.json");
+//            loader.LoadMapFromFile("Maps/mapfile.json");
             int indeksi = PosX + (PosY * 8);
             int numero = mapproxy.mapTiles[indeksi];
 
@@ -104,7 +104,8 @@ namespace Rogue
                 //Draw();
                 //uus alla
                 Console.Clear();
-                loader.LoadMapFromFile("Maps/mapfile.json");
+                //loader.LoadMapFromFile("Maps/mapfile.json");
+                Draw();
                 Console.SetCursorPosition(PosX, PosY);
                 Console.Write("@");
 
